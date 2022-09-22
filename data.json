@@ -1,28 +1,19 @@
 {
-    "students":[
+    "userCount": 5,
+    "apiVersion": "1.0.0.1",
+    "lastUpdated": "2022-05-04T18:37:16.611Z",
+    "emailVerified": true,
+    "passwordSet": true,
+    "questionsSet": false,
+    "enableAutoLogin": false,
+    "users": [
         {
-            "id": "25",
-            "name": "Omprakash"
-        },
-        {
-            "id": "47",
-            "name": "Devika"
-        },
-        {
-            "id": "19",
-            "name": "Prashant"
-        },
-        {
-            "id": "2",
-            "name": "Shashank"
-        },
-        {
-            "id": "1",
-            "name": "Mahima"
-        },
-        {
-            "id": "34",
-            "name": "Nikhil"
-        },
+            "userId": 1,
+            "firstName": "Karen",
+            "lastName": "Stephens",
+            "phoneNumber": "310-940-7009",
+            "emailAddress": "karen.stephens@automationanywhere.com",
+            "jobTitle": "Program Director"
+        }
     ]
 }
