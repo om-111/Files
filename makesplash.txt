@@ -1,0 +1,51 @@
+ionic g page splash
+
+add to app.component.ts
+
+constructor(
+    public router:Router
+  ) {
+    this.initializeApp();
+  }
+  initializeApp() {
+    this.router.navigateByUrl('splash');
+  }
+
+splash.page.html
+
+https://animista.net/play/
+
+<ion-content>
+<div class="container ion-text-center">
+  <img src="assets/O.png">
+</div>
+</ion-content>
+
+splash.page.scss
+
+ion-content{
+    --background:black;
+}
+ @-webkit-keyframes roll-in-blurred-left{0%{-webkit-transform:translateX(-1000px) rotate(-720deg);transform:translateX(-1000px) rotate(-720deg);-webkit-filter:blur(50px);filter:blur(50px);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes roll-in-blurred-left{0%{-webkit-transform:translateX(-1000px) rotate(-720deg);transform:translateX(-1000px) rotate(-720deg);-webkit-filter:blur(50px);filter:blur(50px);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+.container{
+    -webkit-animation:roll-in-blurred-left .65s cubic-bezier(.23,1.000,.32,1.000) both;
+    animation:roll-in-blurred-left .65s cubic-bezier(.23,1.000,.32,1.000) both;
+    img{
+        
+        height: 200px;
+        margin-top: 60%;
+    }
+}
+
+splash.page.ts
+
+constructor(public router:Router) { 
+    setTimeout(()=>{
+      this.router.navigateByUrl('');
+    },1500);
+  }
+
+
+https://daily-dev-tips.com/posts/ionic-adding-a-side-menu/
+
+for sudettabs
