@@ -1,0 +1,482 @@
+Experiment 9 and 10
+<ion-item>
+<ion-label>Average</ion-label>
+<ion-radio slot="start"
+color="tertiary" value="Average"></ion-radio>
+</ion-item>
+<ion-item>
+<ion-label>Poor</ion-label>
+<ion-radio slot="start"
+color="tertiary" value="Poor"></ion-radio>
+</ion-item>
+</ion-radio-group>
+</ion-list>
+<ion-list style="margin-top: 10px;">
+<ion-item>
+<ion-label>Concentration in class</ion-
+label>
+<ion-select
+interface="popover" (ionChange)="initializeConcentration2($event)" [(ngModel)]="
+concentration2" [ngModelOptions]="{standalone: true}">
+<ion-select-option value="above
+80%">Above 80%</ion-select-option>
+<ion-select-option value="around
+50%">Around 50%</ion-select-option>
+<ion-select-option value="below
+30%">Below 30%</ion-select-option>
+</ion-select>
+</ion-item>
+</ion-list>
+</ion-card>
+</li>
+</ul>
+</div>
+</ion-card-content>
+</ion-card>
+<div class="puttingatcentre">
+<ion-button (click)="submitData()" expand="block">SUBMIT</ion-
+button>
+</div>
+</form>
+</ion-content>
+View and Edit Information Page
+<ion-header [translucent]="true">
+<ion-toolbar>
+<ion-title>
+View Details
+</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+<ion-card-header>
+<ion-card-subtitle>Short Summary</ion-card-subtitle>
+</ion-card-header>
+Rashi and Om 2021510028 and 2021510025 Page 7
+Experiment 9 and 10
+<ion-list *ngFor="let user of users">
+<ion-item style="width: 100%;">
+<ion-label style="margin-left: 10px; font-size:12px;">{{user.fullName}}
+</ion-label>
+<ion-label style="margin-left: 10px; font-size:12px;">{{user.ucid}}</
+ion-label>
+<ion-label style="margin-left: 10px; font-size:12px;">{{user.branch}}</
+ion-label>
+<ion-button clear (click)="updateUser(user.id)" color="success">
+<ion-icon name="create"></ion-icon>
+</ion-button>
+<ion-button clear (click)="removeUser(user.id)" style="margin-left:
+10px;" color="danger">
+<ion-icon name="trash"></ion-icon>
+</ion-button>
+</ion-item>
+</ion-list>
+</ion-card>
+<ion-card *ngFor="let user of users">
+<ion-card-header>
+<ion-card-title style="font-size:26px;">{{user.ucid}} - {{user.fullName}}
+</ion-card-title>
+<ion-card-subtitle style="font-weight: 800;font-size:15px; margin-top:
+10px;">Department - {{user.branch}}</ion-card-subtitle>
+</ion-card-header>
+<ion-card-content>
+<ion-item>
+<ion-label style="font-weight: 800; font-size:12px;">Subject</ion-label>
+<ion-label style="font-weight: 800;font-size:12px;">Understand</ion-
+label>
+<ion-label style="font-weight: 800;font-size:12px;">Concentration</ion-
+label>
+</ion-item>
+<ion-item style="width: 100%;">
+<ion-label style="font-size:12px;">MP Lab</ion-label>
+<ion-label style="font-size:12px;">{{user.understanding}}</ion-label>
+<ion-label style="font-size:12px;">{{user.concentration}}</ion-label>
+</ion-item>
+<ion-item style="width: 100%;">
+<ion-label style="font-size:12px;">PA</ion-label>
+<ion-label style="font-size:12px;">{{user.understanding2}}</ion-label>
+<ion-label style="font-size:12px;">{{user.concentration2}}</ion-label>
+</ion-item>
+</ion-card-content>
+<ion-item>
+<ion-button clear (click)="updateUser(user.id)" color="success">
+<ion-icon name="create"></ion-icon>
+</ion-button>
+<ion-button clear (click)="removeUser(user.id)" style="margin-left: 10px;"
+color="danger">
+<ion-icon name="trash"></ion-icon>
+</ion-button>
+</ion-item>
+</ion-card>
+</ion-content>
+Rashi and Om 2021510028 and 2021510025 Page 8
+Experiment 9 and 10
+Update Page
+<ion-header [translucent]="true">
+<ion-toolbar>
+<ion-title>
+Update the Details
+</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+<ion-card-header>
+<ion-card-subtitle>Student Details</ion-card-subtitle>
+</ion-card-header>
+<ion-card-content>
+<ion-list>
+<ion-item>
+<ion-label position="fixed">Full Name</ion-label>
+<ion-input [(ngModel)]="fullName"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="fixed">UCID</ion-label>
+<ion-input [(ngModel)]="ucid"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="fixed">Branch</ion-label>
+<ion-input [(ngModel)]="branch"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="fixed">Year</ion-label>
+<ion-input [(ngModel)]="year"></ion-input>
+</ion-item>
+</ion-list>
+</ion-card-content>
+</ion-card>
+<ion-card>
+<ion-card-header>
+<ion-card-subtitle>Submitted Feedback</ion-card-subtitle>
+</ion-card-header>
+<ion-card-content>
+<ion-list >
+<h1>Mobile Programming Lab</h1>
+<ion-item>
+<ion-label position="fixed" style="display:contents;">Understanding:
+</ion-label>
+<ion-input [(ngModel)]="understanding"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="fixed" style="display:contents;">Concentration:
+</ion-label>
+<ion-input [(ngModel)]="concentration"></ion-input>
+</ion-item>
+<br>
+<h1>Process Automation</h1>
+<ion-item>
+Rashi and Om 2021510028 and 2021510025 Page 9
+Experiment 9 and 10
+<ion-label position="fixed" style="display:contents;">Understanding:
+</ion-label>
+<ion-input [(ngModel)]="understanding2"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="fixed" style="display:contents;">Concentration:
+</ion-label>
+<ion-input [(ngModel)]="concentration2"></ion-input>
+</ion-item>
+</ion-list>
+</ion-card-content>
+</ion-card>
+<div class="puttingatcentre">
+<ion-button type="submit" expand="block" (click)="onSubmit()">Update</ion-
+button>
+</div>
+</ion-content>
+Rashi and Om 2021510028 and 2021510025 Page 10
+Experiment 9 and 10
+TS Files
+Student Feedback Form Page
+/* eslint-disable arrow-body-style */
+/* eslint-disable @typescript-eslint/dot-notation */
+import { Component } from '@angular/core';
+import { getDatabase, ref, set } from 'firebase/database';
+import { FirebaseServiceService, User } from 'src/app/services/firebase-
+service.service';
+import { Observable } from 'rxjs';
+import { IonRadioGroup, ToastController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormGroup, Validators, FormBuilder, CheckboxControlValueAccessor } from
+'@angular/forms';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { timeStamp } from 'console';
+import {Storage} from '@ionic/storage';
+@Component({
+selector: 'app-tab1',
+templateUrl: 'tab1.page.html',
+styleUrls: ['tab1.page.scss']
+})
+export class Tab1Page {
+fullName: string;
+ucid: string;
+branch: string;
+year: string;
+userForm: FormGroup;
+user: User = {
+fullName: '',
+ucid: '',
+branch: '',
+year: '',
+understanding: '',
+concentration: '',
+understanding2: '',
+concentration2: ''
+};
+understanding: string;
+concentration: string;
+understanding2: string;
+concentration2: string;
+pcs: boolean;
+pa: boolean;
+mpl: boolean;
+id: string;
+//private users: Observable<User[]>;
+private users = [];
+constructor(private firebaseService: FirebaseServiceService, private
+toastCtrl: ToastController,
+public fb: FormBuilder, private storage: Storage, private afAuth:
+AngularFireAuth) {
+this.init();
+}
+Rashi and Om 2021510028 and 2021510025 Page 11
+Experiment 9 and 10
+/*ionViewWillEnter() {
+const id = this.activatedRoute.snapshot.paramMap.get('id');
+if (id) {
+this.firebaseService.getUser(id).subscribe(user => {
+this.user = user;
+});
+}
+}*/
+async init() {
+await this.storage.create();
+const name = await this.storage.get('uname');
+//console.log('uname is'+name);
+}
+// eslint-disable-next-line @angular-eslint/use-lifecycle-interface
+ngOnInit() {
+this.userForm = this.fb.group({
+fullName: ['', [Validators.required]],
+ucid: ['', [Validators.required]],
+branch: ['', [Validators.required]],
+year: ['', [Validators.required]]
+});
+this.firebaseService.getUsers().subscribe(data => {
+this.users = data.map(e => {
+return {
+id: e.payload.doc.id,
+isEdit: false,
+fullName: e.payload.doc.data()['fullName'],
+ucid: e.payload.doc.data()['ucid'],
+branch: e.payload.doc.data()['branch'],
+year: e.payload.doc.data()['branch'],
+understanding: e.payload.doc.data()['understanding'],
+concentration: e.payload.doc.data()['concentration']
+};
+});
+console.log(this.users);
+});
+}
+submitData(): any{
+this.user = {
+fullName: this.fullName,
+ucid: this.ucid,
+branch: this.branch,
+year: this.year,
+understanding: this.understanding,
+concentration: this.concentration,
+understanding2: this.understanding2,
+concentration2: this.concentration
+};
+console.log('Understanding: ' + this.understanding);
+console.log('Concentration: ' + this.concentration);
+console.log('MPL: ' + this.mpl);
+console.log('PCS: ' + this.pcs);
+console.log('PA: ' + this.pa);
+this.firebaseService.addUser(this.user).then(() => {
+this.showToast('User details submitted successfully!!');
+Rashi and Om 2021510028 and 2021510025 Page 12
+Experiment 9 and 10
+}, err => {
+this.showToast('There was a problem adding your details!');
+});
+}
+showToast(msg) {
+this.toastCtrl.create({
+message: msg,
+duration: 2000
+}).then(toast => toast.present());
+}
+initializeUnderstanding(event){
+this.understanding = event.detail.value;
+}
+initializeConcentration(event){
+this.concentration = event.detail.value;
+}
+initializeUnderstanding2(event){
+this.understanding2 = event.detail.value;
+}
+initializeConcentration2(event){
+this.concentration2 = event.detail.value;
+}
+addPCS(event){
+if (event.checked === true){
+this.pcs = true;
+}
+}
+addPA(event){
+if (event.checked === true){
+this.pa = true;
+}
+}
+addMPL(event){
+if (event.checked === true){
+this.mpl = true;
+}
+}
+}
+View and Edit Information Page
+import { Component } from '@angular/core';
+import { FirebaseServiceService, User } from 'src/app/services/firebase-
+service.service';
+import { Router } from '@angular/router';
+@Component({
+selector: 'app-tab2',
+templateUrl: 'tab2.page.html',
+styleUrls: ['tab2.page.scss']
+})
+export class Tab2Page {
+fullName: string;
+ucid: string;
+Rashi and Om 2021510028 and 2021510025 Page 13
+Experiment 9 and 10
+Update Page
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from "@angular/router";
+import { FormGroup, FormBuilder } from "@angular/forms";
+import { FirebaseServiceService, User } from 'src/app/services/firebase-
+service.service';
+@Component({
+selector: 'app-tab3',
+templateUrl: 'tab3.page.html',
+styleUrls: ['tab3.page.scss']
+})
+export class Tab3Page {
+fullName: string;
+ucid: string;
+branch: string;
+year: string;
+docid:string;
+understanding: string;
+concentration: string;
+understanding2: string;
+concentration2: string;
+id: any;
+user: User = {
+fullName: '',
+ucid: '',
+branch: '',
+year: '',
+understanding: '',
+concentration: '',
+understanding2: '',
+concentration2: ''
+};
+constructor(
+private firebaseService: FirebaseServiceService,
+private activatedRoute: ActivatedRoute,
+public formBuilder: FormBuilder,
+private router: Router
+) {
+this.id = this.activatedRoute.snapshot.paramMap.get('id');
+this.firebaseService.getUser(this.id).then((value) => {
+this.fullName= value[0];
+this.ucid=value[1];
+this.branch= value[2];
+this.year=value[3];
+this.understanding= value[4];
+this.concentration=value[5];
+this.understanding2= value[6];
+this.concentration2=value[7];
+});
+}
+onSubmit() {
+this.user = {
+fullName: this.fullName,
+ucid: this.ucid,
+Rashi and Om 2021510028 and 2021510025 Page 15
+Experiment 9 and 10
+branch: this.branch,
+year: this.year,
+understanding: this.understanding,
+concentration: this.concentration,
+understanding2: this.understanding2,
+concentration2: this.concentration2
+};
+this.firebaseService.updateUser(this.id, this.user);
+this.router.navigate(['/tabs/tab2']);
+}
+}
+Service Page
+import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument,
+DocumentReference } from '@angular/fire/compat/firestore';
+import { map, take } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+export interface User{
+fullName: string;
+ucid: string;
+branch: string;
+year: string;
+understanding: string;
+concentration: string;
+understanding2: string;
+concentration2: string;
+}
+@Injectable({
+providedIn: 'root'
+})
+export class FirebaseServiceService {
+collectionName = 'users';
+db = getFirestore();
+private users: Observable<User[]>;
+private userCollection: AngularFirestoreCollection<User>;
+constructor(private firestore: AngularFirestore) {
+}
+addUser(user: User) {
+return this.firestore.collection(this.collectionName).add(user);
+// .then(function(docRef) {
+// console.log("Document written with ID: ", docRef.id);
+// })
+// .catch(function(error) {
+// console.error("Error adding document: ", error);
+// });
+}
+getUsers() {
+return this.firestore.collection(this.collectionName).snapshotChanges();
+}
+async getUser(docid){
+const docRef = doc(this.db, this.collectionName, docid);
+Rashi and Om 2021510028 and 2021510025 Page 16
+Experiment 9 and 10
+const docSnap = await getDoc(docRef);
+const user=docSnap.data();
+return [user['fullName'],
+user['ucid'],
+user['branch'],
+user['year'],
+user['understanding'],
+user['concentration'],
+user['understanding2'],
+user['concentration2'],
+];
+}
+updateUser(docid, user) {
+this.firestore.doc(this.collectionName + '/' + docid).update(user);
+}
+deleteUser(docid) {
+this.firestore.doc(this.collectionName + '/' + docid).delete();
+}
+}
